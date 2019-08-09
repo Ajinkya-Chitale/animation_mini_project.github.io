@@ -1,8 +1,130 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*----- TABS START -----*/
+h2{
+	background-color: black;
+	display: flex;
+	justify-content: center;
+}
+h2 span{
+	display: table-cell;
+	padding-right: 2px;
+	animation: text 3.25s linear infinite;
+	font-style: italic;
+}
+h2 span:nth-child(1){
+	animation-delay: 0s;
+}
+h2 span:nth-child(2){
+	animation-delay: 0.25s;
+}
+h2 span:nth-child(3){
+	animation-delay: 0.5s;
+}
+h2 span:nth-child(4){
+	animation-delay: 0.75s;
+}
+h2 span:nth-child(5){
+	animation-delay: 1s;
+}
+h2 span:nth-child(6){
+	animation-delay: 1.25s;
+}
+h2 span:nth-child(7){
+	animation-delay: 1.50s;
+}
+h2 span:nth-child(8){
+	animation-delay: 1.75s;
+}
+h2 span:nth-child(9){
+	animation-delay: 2s;
+}
+h2 span:nth-child(10){
+	animation-delay: 2.25s;
+}
+h2 span:nth-child(11){
+	animation-delay: 2.50s;
+}
+h2 span:nth-child(12){
+	animation-delay: 2.75s;
+}
+h2 span:nth-child(13){
+	animation-delay: 3s;
+}
+.nav-tabs{
+	background-color: black;
+}
+.nav-tabs li{
+	padding: 10px 20px 4px 15px;
+}
+.nav-tabs li a{
+	color: #fff;
+	font-family: cambria;
+	font-size: 20px;
+}
+.nav-tabs li a:hover{
+	text-decoration: none;
+	border-bottom: 4px solid #fff;
+	transition: 0.5s;
+}
+.panels li{
+	position: relative;
+}
+.panels li div{
+	width: 100%;
+	padding: 16% 0;
+	text-align: center;
+	cursor: pointer;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.panels div.back{
+	transform: rotateY(90deg);
+}
+.panels div.front{
+	position: absolute;
+}
+.panels li:hover div.front{
+	animation: flip 0.3s ease-in forwards;
+}
+.panels li:hover div.back{
+	animation: flip 0.3s 0.3s ease-out forwards reverse;
+}
+@keyframes flip{
+	from{transform: rotateY(0deg)}
+	to{transform: rotateY(90deg)}
+}
+@keyframes text{
+	0%,100%{
+		color: #fff;
+		filter: blur(2px);
+		text-shadow: 0 0 10px #00b3ff,
+					 0 0 20px #00b3ff,
+					 0 0 40px #00b3ff,
+					 0 0 80px #00b3ff,
+					 0 0 120px #00b3ff,
+					 0 0 200px #00b3ff,
+					 0 0 300px #00b3ff,
+					 0 0 400px #00b3ff,
+					 0 0 550px #00b3ff,
+					 0 0 650px #00b3ff,
+					 0 0 750px #00b3ff,
+					 0 0 900px #00b3ff;
+	}
+	5%,95%{
+		color: #111;
+		filter: blur(0px);
+		text-shadow: none;
+	}
+}
+
+
+/*----- TABS END -----*/
+
+/*----- MARIO CSS START -----*/
 .sky{
-	height: 30vh;
+	height: 25vh;
 	width: 100%;
 	background-color: skyblue;
 	position: relative;
@@ -34,13 +156,13 @@
 }
 .grass{
 	box-sizing: border-box;
-	height: 30vh;
+	height: 25vh;
 	width: 100%;
 	background-color: forestgreen;
 }
 .road{
 	box-sizing: border-box;
-	height: 40vh;
+	height: 35vh;
 	width: 100%;
 	background-color:dimgrey;
 	position: relative;
@@ -89,7 +211,8 @@
 	to{transform: translateX(1600px);}
 }
 @keyframes jump{
-	0%{top:15px;}
-	50%{top: -15px;}
-	100{top: 15px;}
+	0%{top:15px}
+	50%{top: -15px}
+	100{top: 15px}
 }
+/*----- MARIO CSS END -----*/
